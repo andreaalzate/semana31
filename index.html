@@ -452,4 +452,1366 @@ cronoo=setInterval(des1,10000);
 cronooo=setInterval(des3,9000);
 </script>
 </body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+
+	<title>Entrega semana 31</title>
+<style>
+	.titulo{
+		position: absolute;
+		top: 45px;
+		left: 608px;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	border: solid 1px; 
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		height: 30px;
+		width: 220px;
+		padding: 10px;
+
+	}
+	.cuaad{
+		position: absolute;
+		top: -10px;
+		left: 700px;
+		border: solid 1px; 
+		width: 0px;
+		height: 0px;
+		background: #51FFB8;
+	}
+	.cua{
+		position: absolute;
+		top: -20px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	.cir{
+		position: absolute;
+		top: 25px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	
+	.logo{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	width: 0px;
+	height: 200px;
+	border-radius: 30px;		
+	}
+	.eje1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.eje2{
+		position: absolute;
+		top: 400px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.oc{
+		position: absolute;
+		top: 470px;
+		left: 210px;
+		width: 120px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+	}
+	.come{
+		position: absolute;
+		top: 500px;
+		left: 210px;
+		width: 150px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 25px;
+		font-family: 'Gluten', cursive;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
+<div class="tc"></div>
+<div class="titulo" onclick="lo()">NEOSISTEMAS
+<img src="ent31/Neosistemas.png" class="logo" id="log">
+</div>
+<div class="eje1" onclick="e1()"><center> EJE 1</center>
+<div class="cuaad" id="t"></div>
+</div>
+<div class="oc" onclick="o()">Ocultar</div>
+<div class="eje2" onclick="e2()"><center> EJE 2</center>
+	<div  class="cua" id="a"></div>
+	
+	<div  class="cir" id="b"></div>
+
+</div>
+<div class="come" id="com" onclick="comen()">Comentario</div>
+<script>
+x=0;
+function lo(){
+	log.style.width=200+"px";
+}
+function des(){
+	if(log.style.width==200+"px"){
+		log.style.width=0+"px";
+	}
+}
+function posicion(event){
+	x=event.clientX;
+	y=event.clientY;
+	t.innerHTML=x+"x  "+y+"y  ";
+	if(x>=601&&x<=1300){
+	t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+	t.style.color="#D7FFFC";
+	}
+	else if(y<=830&&y>=512){
+		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+		t.style.color="#D7FFFC";
+	}
+	else{ 
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
+	}
+}
+function e1(){
+	t.style.width=400+"px";
+	t.style.height=300+"px";
+}
+function des1(){
+	if(t.style.width==500+"px"){
+		t.style.width=0+"px";
+		t.style.height=0+"px";
+		t.style.fontSize=0+"px";
+		t.style.border=0+"px";
+	}
+}
+function e2(){
+	a.style.width=150+"px";
+	a.style.height=60+"px";
+	b.style.width=150+"px";
+	b.style.height=60+"px";
+	a.style.fontSize=60+"px";
+	b.style.fontSize=50+"px";
+}
+function mostrar(){
+		x=x+1;
+		setTimeout(mostrar1,200);
+		setTimeout(mostrar2,400);
+		setTimeout(mostrar3,600);
+		setTimeout(mostrar4,800);
+		a.style.color="#D7FFFC";
+		b.style.color="#D7FFFC";
+		if(x==100){
+			clearInterval(cronoi);
+		}
+	}
+	function mostrar1(){
+		a.style.width=25+"px";
+		a.innerHTML="H";
+		b.innerHTML="1";
+	}
+	function mostrar2(){
+		a.style.width=40+"px";
+		a.innerHTML="Ho";
+		b.innerHTML="1 2";
+	}
+	function mostrar3(){
+		a.style.width=90+"px";
+		a.innerHTML="Hol";
+		b.innerHTML="1 2 3";
+	}
+	function mostrar4(){
+		a.style.width=150+"px";
+		a.innerHTML="Hola";
+		b.innerHTML="1 2 3 4";
+	}
+	function o(){
+	a.style.width=0+"px";
+	a.style.height=0+"px";
+	b.style.width=0+"px";
+	b.style.height=0+"px";
+	
+}
+	function comen(){
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar poner el límite del afuera, lo cuál logré de cierto modo, aunque quería que luego de meterme en el cuadro y me saliera volviese a aparecer el estoy fuera, porque solo aparecía al inicio y afuera en la derecha a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere, hice mi mejor esfuerzo y por eso me sentí satisfecha."
+		com.style.width=550+"px";
+		com.style.height=300+"px";
+	}
+
+cronoi=setInterval(mostrar,2000);
+crono=setInterval(des,5000);
+cronoo=setInterval(des1,10000);
+cronooo=setInterval(des3,9000);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+
+	<title>Entrega semana 31</title>
+<style>
+	.titulo{
+		position: absolute;
+		top: 45px;
+		left: 608px;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	border: solid 1px; 
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		height: 30px;
+		width: 220px;
+		padding: 10px;
+
+	}
+	.cuaad{
+		position: absolute;
+		top: -10px;
+		left: 700px;
+		border: solid 1px; 
+		width: 0px;
+		height: 0px;
+		background: #51FFB8;
+	}
+	.cua{
+		position: absolute;
+		top: -20px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	.cir{
+		position: absolute;
+		top: 25px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	
+	.logo{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	width: 0px;
+	height: 200px;
+	border-radius: 30px;		
+	}
+	.eje1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.eje2{
+		position: absolute;
+		top: 400px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.oc{
+		position: absolute;
+		top: 470px;
+		left: 210px;
+		width: 120px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+	}
+	.come{
+		position: absolute;
+		top: 500px;
+		left: 210px;
+		width: 150px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 25px;
+		font-family: 'Gluten', cursive;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
+<div class="tc"></div>
+<div class="titulo" onclick="lo()">NEOSISTEMAS
+<img src="ent31/Neosistemas.png" class="logo" id="log">
+</div>
+<div class="eje1" onclick="e1()"><center> EJE 1</center>
+<div class="cuaad" id="t"></div>
+</div>
+<div class="oc" onclick="o()">Ocultar</div>
+<div class="eje2" onclick="e2()"><center> EJE 2</center>
+	<div  class="cua" id="a"></div>
+	
+	<div  class="cir" id="b"></div>
+
+</div>
+<div class="come" id="com" onclick="comen()">Comentario</div>
+<script>
+x=0;
+function lo(){
+	log.style.width=200+"px";
+}
+function des(){
+	if(log.style.width==200+"px"){
+		log.style.width=0+"px";
+	}
+}
+function posicion(event){
+	x=event.clientX;
+	y=event.clientY;
+	t.innerHTML=x+"x  "+y+"y  ";
+	if(x>=601&&x<=1300){
+	t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+	t.style.color="#D7FFFC";
+	}
+	else if(y<=830&&y>=512){
+		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+		t.style.color="#D7FFFC";
+	}
+	else{ 
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
+	}
+}
+function e1(){
+	t.style.width=400+"px";
+	t.style.height=300+"px";
+}
+function des1(){
+	if(t.style.width==500+"px"){
+		t.style.width=0+"px";
+		t.style.height=0+"px";
+		t.style.fontSize=0+"px";
+		t.style.border=0+"px";
+	}
+}
+function e2(){
+	a.style.width=150+"px";
+	a.style.height=60+"px";
+	b.style.width=150+"px";
+	b.style.height=60+"px";
+	a.style.fontSize=60+"px";
+	b.style.fontSize=50+"px";
+}
+function mostrar(){
+		x=x+1;
+		setTimeout(mostrar1,200);
+		setTimeout(mostrar2,400);
+		setTimeout(mostrar3,600);
+		setTimeout(mostrar4,800);
+		a.style.color="#D7FFFC";
+		b.style.color="#D7FFFC";
+		if(x==100){
+			clearInterval(cronoi);
+		}
+	}
+	function mostrar1(){
+		a.style.width=25+"px";
+		a.innerHTML="H";
+		b.innerHTML="1";
+	}
+	function mostrar2(){
+		a.style.width=40+"px";
+		a.innerHTML="Ho";
+		b.innerHTML="1 2";
+	}
+	function mostrar3(){
+		a.style.width=90+"px";
+		a.innerHTML="Hol";
+		b.innerHTML="1 2 3";
+	}
+	function mostrar4(){
+		a.style.width=150+"px";
+		a.innerHTML="Hola";
+		b.innerHTML="1 2 3 4";
+	}
+	function o(){
+	a.style.width=0+"px";
+	a.style.height=0+"px";
+	b.style.width=0+"px";
+	b.style.height=0+"px";
+	
+}
+	function comen(){
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar poner el límite del afuera, lo cuál logré de cierto modo, aunque quería que luego de meterme en el cuadro y me saliera volviese a aparecer el estoy fuera, porque solo aparecía al inicio y afuera en la derecha a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere, hice mi mejor esfuerzo y por eso me sentí satisfecha."
+		com.style.width=550+"px";
+		com.style.height=300+"px";
+	}
+
+cronoi=setInterval(mostrar,2000);
+crono=setInterval(des,5000);
+cronoo=setInterval(des1,10000);
+cronooo=setInterval(des3,9000);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+
+	<title>Entrega semana 31</title>
+<style>
+	.titulo{
+		position: absolute;
+		top: 45px;
+		left: 608px;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	border: solid 1px; 
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		height: 30px;
+		width: 220px;
+		padding: 10px;
+
+	}
+	.cuaad{
+		position: absolute;
+		top: -10px;
+		left: 700px;
+		border: solid 1px; 
+		width: 0px;
+		height: 0px;
+		background: #51FFB8;
+	}
+	.cua{
+		position: absolute;
+		top: -20px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	.cir{
+		position: absolute;
+		top: 25px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	
+	.logo{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	width: 0px;
+	height: 200px;
+	border-radius: 30px;		
+	}
+	.eje1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.eje2{
+		position: absolute;
+		top: 400px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.oc{
+		position: absolute;
+		top: 470px;
+		left: 210px;
+		width: 120px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+	}
+	.come{
+		position: absolute;
+		top: 500px;
+		left: 210px;
+		width: 150px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 25px;
+		font-family: 'Gluten', cursive;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
+<div class="tc"></div>
+<div class="titulo" onclick="lo()">NEOSISTEMAS
+<img src="ent31/Neosistemas.png" class="logo" id="log">
+</div>
+<div class="eje1" onclick="e1()"><center> EJE 1</center>
+<div class="cuaad" id="t"></div>
+</div>
+<div class="oc" onclick="o()">Ocultar</div>
+<div class="eje2" onclick="e2()"><center> EJE 2</center>
+	<div  class="cua" id="a"></div>
+	
+	<div  class="cir" id="b"></div>
+
+</div>
+<div class="come" id="com" onclick="comen()">Comentario</div>
+<script>
+x=0;
+function lo(){
+	log.style.width=200+"px";
+}
+function des(){
+	if(log.style.width==200+"px"){
+		log.style.width=0+"px";
+	}
+}
+function posicion(event){
+	x=event.clientX;
+	y=event.clientY;
+	t.innerHTML=x+"x  "+y+"y  ";
+	if(x>=601&&x<=1300){
+	t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+	t.style.color="#D7FFFC";
+	}
+	else if(y<=830&&y>=512){
+		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+		t.style.color="#D7FFFC";
+	}
+	else{ 
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
+	}
+}
+function e1(){
+	t.style.width=400+"px";
+	t.style.height=300+"px";
+}
+function des1(){
+	if(t.style.width==500+"px"){
+		t.style.width=0+"px";
+		t.style.height=0+"px";
+		t.style.fontSize=0+"px";
+		t.style.border=0+"px";
+	}
+}
+function e2(){
+	a.style.width=150+"px";
+	a.style.height=60+"px";
+	b.style.width=150+"px";
+	b.style.height=60+"px";
+	a.style.fontSize=60+"px";
+	b.style.fontSize=50+"px";
+}
+function mostrar(){
+		x=x+1;
+		setTimeout(mostrar1,200);
+		setTimeout(mostrar2,400);
+		setTimeout(mostrar3,600);
+		setTimeout(mostrar4,800);
+		a.style.color="#D7FFFC";
+		b.style.color="#D7FFFC";
+		if(x==100){
+			clearInterval(cronoi);
+		}
+	}
+	function mostrar1(){
+		a.style.width=25+"px";
+		a.innerHTML="H";
+		b.innerHTML="1";
+	}
+	function mostrar2(){
+		a.style.width=40+"px";
+		a.innerHTML="Ho";
+		b.innerHTML="1 2";
+	}
+	function mostrar3(){
+		a.style.width=90+"px";
+		a.innerHTML="Hol";
+		b.innerHTML="1 2 3";
+	}
+	function mostrar4(){
+		a.style.width=150+"px";
+		a.innerHTML="Hola";
+		b.innerHTML="1 2 3 4";
+	}
+	function o(){
+	a.style.width=0+"px";
+	a.style.height=0+"px";
+	b.style.width=0+"px";
+	b.style.height=0+"px";
+	
+}
+	function comen(){
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar poner el límite del afuera, lo cuál logré de cierto modo, aunque quería que luego de meterme en el cuadro y me saliera volviese a aparecer el estoy fuera, porque solo aparecía al inicio y afuera en la derecha a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere, hice mi mejor esfuerzo y por eso me sentí satisfecha."
+		com.style.width=550+"px";
+		com.style.height=300+"px";
+	}
+
+cronoi=setInterval(mostrar,2000);
+crono=setInterval(des,5000);
+cronoo=setInterval(des1,10000);
+cronooo=setInterval(des3,9000);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+
+	<title>Entrega semana 31</title>
+<style>
+	.titulo{
+		position: absolute;
+		top: 45px;
+		left: 608px;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	border: solid 1px; 
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		height: 30px;
+		width: 220px;
+		padding: 10px;
+
+	}
+	.cuaad{
+		position: absolute;
+		top: -10px;
+		left: 700px;
+		border: solid 1px; 
+		width: 0px;
+		height: 0px;
+		background: #51FFB8;
+	}
+	.cua{
+		position: absolute;
+		top: -20px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	.cir{
+		position: absolute;
+		top: 25px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	
+	.logo{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	width: 0px;
+	height: 200px;
+	border-radius: 30px;		
+	}
+	.eje1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.eje2{
+		position: absolute;
+		top: 400px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.oc{
+		position: absolute;
+		top: 470px;
+		left: 210px;
+		width: 120px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+	}
+	.come{
+		position: absolute;
+		top: 500px;
+		left: 210px;
+		width: 150px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 25px;
+		font-family: 'Gluten', cursive;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
+<div class="tc"></div>
+<div class="titulo" onclick="lo()">NEOSISTEMAS
+<img src="ent31/Neosistemas.png" class="logo" id="log">
+</div>
+<div class="eje1" onclick="e1()"><center> EJE 1</center>
+<div class="cuaad" id="t"></div>
+</div>
+<div class="oc" onclick="o()">Ocultar</div>
+<div class="eje2" onclick="e2()"><center> EJE 2</center>
+	<div  class="cua" id="a"></div>
+	
+	<div  class="cir" id="b"></div>
+
+</div>
+<div class="come" id="com" onclick="comen()">Comentario</div>
+<script>
+x=0;
+function lo(){
+	log.style.width=200+"px";
+}
+function des(){
+	if(log.style.width==200+"px"){
+		log.style.width=0+"px";
+	}
+}
+function posicion(event){
+	x=event.clientX;
+	y=event.clientY;
+	t.innerHTML=x+"x  "+y+"y  ";
+	if(x>=601&&x<=1300){
+	t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+	t.style.color="#D7FFFC";
+	}
+	else if(y<=830&&y>=512){
+		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+		t.style.color="#D7FFFC";
+	}
+	else{ 
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
+	}
+}
+function e1(){
+	t.style.width=400+"px";
+	t.style.height=300+"px";
+}
+function des1(){
+	if(t.style.width==500+"px"){
+		t.style.width=0+"px";
+		t.style.height=0+"px";
+		t.style.fontSize=0+"px";
+		t.style.border=0+"px";
+	}
+}
+function e2(){
+	a.style.width=150+"px";
+	a.style.height=60+"px";
+	b.style.width=150+"px";
+	b.style.height=60+"px";
+	a.style.fontSize=60+"px";
+	b.style.fontSize=50+"px";
+}
+function mostrar(){
+		x=x+1;
+		setTimeout(mostrar1,200);
+		setTimeout(mostrar2,400);
+		setTimeout(mostrar3,600);
+		setTimeout(mostrar4,800);
+		a.style.color="#D7FFFC";
+		b.style.color="#D7FFFC";
+		if(x==100){
+			clearInterval(cronoi);
+		}
+	}
+	function mostrar1(){
+		a.style.width=25+"px";
+		a.innerHTML="H";
+		b.innerHTML="1";
+	}
+	function mostrar2(){
+		a.style.width=40+"px";
+		a.innerHTML="Ho";
+		b.innerHTML="1 2";
+	}
+	function mostrar3(){
+		a.style.width=90+"px";
+		a.innerHTML="Hol";
+		b.innerHTML="1 2 3";
+	}
+	function mostrar4(){
+		a.style.width=150+"px";
+		a.innerHTML="Hola";
+		b.innerHTML="1 2 3 4";
+	}
+	function o(){
+	a.style.width=0+"px";
+	a.style.height=0+"px";
+	b.style.width=0+"px";
+	b.style.height=0+"px";
+	
+}
+	function comen(){
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar poner el límite del afuera, lo cuál logré de cierto modo, aunque quería que luego de meterme en el cuadro y me saliera volviese a aparecer el estoy fuera, porque solo aparecía al inicio y afuera en la derecha a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere, hice mi mejor esfuerzo y por eso me sentí satisfecha."
+		com.style.width=550+"px";
+		com.style.height=300+"px";
+	}
+
+cronoi=setInterval(mostrar,2000);
+crono=setInterval(des,5000);
+cronoo=setInterval(des1,10000);
+cronooo=setInterval(des3,9000);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+
+	<title>Entrega semana 31</title>
+<style>
+	.titulo{
+		position: absolute;
+		top: 45px;
+		left: 608px;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	border: solid 1px; 
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		height: 30px;
+		width: 220px;
+		padding: 10px;
+
+	}
+	.cuaad{
+		position: absolute;
+		top: -10px;
+		left: 700px;
+		border: solid 1px; 
+		width: 0px;
+		height: 0px;
+		background: #51FFB8;
+	}
+	.cua{
+		position: absolute;
+		top: -20px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	.cir{
+		position: absolute;
+		top: 25px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	
+	.logo{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	width: 0px;
+	height: 200px;
+	border-radius: 30px;		
+	}
+	.eje1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.eje2{
+		position: absolute;
+		top: 400px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.oc{
+		position: absolute;
+		top: 470px;
+		left: 210px;
+		width: 120px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+	}
+	.come{
+		position: absolute;
+		top: 500px;
+		left: 210px;
+		width: 150px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 25px;
+		font-family: 'Gluten', cursive;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
+<div class="tc"></div>
+<div class="titulo" onclick="lo()">NEOSISTEMAS
+<img src="ent31/Neosistemas.png" class="logo" id="log">
+</div>
+<div class="eje1" onclick="e1()"><center> EJE 1</center>
+<div class="cuaad" id="t"></div>
+</div>
+<div class="oc" onclick="o()">Ocultar</div>
+<div class="eje2" onclick="e2()"><center> EJE 2</center>
+	<div  class="cua" id="a"></div>
+	
+	<div  class="cir" id="b"></div>
+
+</div>
+<div class="come" id="com" onclick="comen()">Comentario</div>
+<script>
+x=0;
+function lo(){
+	log.style.width=200+"px";
+}
+function des(){
+	if(log.style.width==200+"px"){
+		log.style.width=0+"px";
+	}
+}
+function posicion(event){
+	x=event.clientX;
+	y=event.clientY;
+	t.innerHTML=x+"x  "+y+"y  ";
+	if(x>=601&&x<=1300){
+	t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+	t.style.color="#D7FFFC";
+	}
+	else if(y<=830&&y>=512){
+		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+		t.style.color="#D7FFFC";
+	}
+	else{ 
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
+	}
+}
+function e1(){
+	t.style.width=400+"px";
+	t.style.height=300+"px";
+}
+function des1(){
+	if(t.style.width==500+"px"){
+		t.style.width=0+"px";
+		t.style.height=0+"px";
+		t.style.fontSize=0+"px";
+		t.style.border=0+"px";
+	}
+}
+function e2(){
+	a.style.width=150+"px";
+	a.style.height=60+"px";
+	b.style.width=150+"px";
+	b.style.height=60+"px";
+	a.style.fontSize=60+"px";
+	b.style.fontSize=50+"px";
+}
+function mostrar(){
+		x=x+1;
+		setTimeout(mostrar1,200);
+		setTimeout(mostrar2,400);
+		setTimeout(mostrar3,600);
+		setTimeout(mostrar4,800);
+		a.style.color="#D7FFFC";
+		b.style.color="#D7FFFC";
+		if(x==100){
+			clearInterval(cronoi);
+		}
+	}
+	function mostrar1(){
+		a.style.width=25+"px";
+		a.innerHTML="H";
+		b.innerHTML="1";
+	}
+	function mostrar2(){
+		a.style.width=40+"px";
+		a.innerHTML="Ho";
+		b.innerHTML="1 2";
+	}
+	function mostrar3(){
+		a.style.width=90+"px";
+		a.innerHTML="Hol";
+		b.innerHTML="1 2 3";
+	}
+	function mostrar4(){
+		a.style.width=150+"px";
+		a.innerHTML="Hola";
+		b.innerHTML="1 2 3 4";
+	}
+	function o(){
+	a.style.width=0+"px";
+	a.style.height=0+"px";
+	b.style.width=0+"px";
+	b.style.height=0+"px";
+	
+}
+	function comen(){
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar poner el límite del afuera, lo cuál logré de cierto modo, aunque quería que luego de meterme en el cuadro y me saliera volviese a aparecer el estoy fuera, porque solo aparecía al inicio y afuera en la derecha a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere, hice mi mejor esfuerzo y por eso me sentí satisfecha."
+		com.style.width=550+"px";
+		com.style.height=300+"px";
+	}
+
+cronoi=setInterval(mostrar,2000);
+crono=setInterval(des,5000);
+cronoo=setInterval(des1,10000);
+cronooo=setInterval(des3,9000);
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+
+	<title>Entrega semana 31</title>
+<style>
+	.titulo{
+		position: absolute;
+		top: 45px;
+		left: 608px;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	border: solid 1px; 
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		height: 30px;
+		width: 220px;
+		padding: 10px;
+
+	}
+	.cuaad{
+		position: absolute;
+		top: -10px;
+		left: 700px;
+		border: solid 1px; 
+		width: 0px;
+		height: 0px;
+		background: #51FFB8;
+	}
+	.cua{
+		position: absolute;
+		top: -20px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	.cir{
+		position: absolute;
+		top: 25px;
+		left: 400px;
+		background: #51FFB8;
+		width: 0px;
+		height: 0px;
+		border-radius: 10px;
+	}
+	
+	.logo{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	width: 0px;
+	height: 200px;
+	border-radius: 30px;		
+	}
+	.eje1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.eje2{
+		position: absolute;
+		top: 400px;
+		left: 200px;
+		border: solid 1px; 
+		font-family: 'Gluten', cursive;
+		background: #51FFB8;
+		font-size: 30px;
+		border-radius: 20px;
+		 padding: 10px;
+		height: 20px;
+		width: 200px;
+	}
+	.oc{
+		position: absolute;
+		top: 470px;
+		left: 210px;
+		width: 120px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 30px;
+		font-family: 'Gluten', cursive;
+	}
+	.come{
+		position: absolute;
+		top: 500px;
+		left: 210px;
+		width: 150px;
+		height: 20px;
+		border-radius: 5px;
+		background: #51FFB8;
+		font-size: 25px;
+		font-family: 'Gluten', cursive;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
+<div class="tc"></div>
+<div class="titulo" onclick="lo()">NEOSISTEMAS
+<img src="ent31/Neosistemas.png" class="logo" id="log">
+</div>
+<div class="eje1" onclick="e1()"><center> EJE 1</center>
+<div class="cuaad" id="t"></div>
+</div>
+<div class="oc" onclick="o()">Ocultar</div>
+<div class="eje2" onclick="e2()"><center> EJE 2</center>
+	<div  class="cua" id="a"></div>
+	
+	<div  class="cir" id="b"></div>
+
+</div>
+<div class="come" id="com" onclick="comen()">Comentario</div>
+<script>
+x=0;
+function lo(){
+	log.style.width=200+"px";
+}
+function des(){
+	if(log.style.width==200+"px"){
+		log.style.width=0+"px";
+	}
+}
+function posicion(event){
+	x=event.clientX;
+	y=event.clientY;
+	t.innerHTML=x+"x  "+y+"y  ";
+	if(x>=601&&x<=1300){
+	t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+	t.style.color="#D7FFFC";
+	}
+	else if(y<=830&&y>=512){
+		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
+		t.style.color="#D7FFFC";
+	}
+	else{ 
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
+	}
+}
+function e1(){
+	t.style.width=400+"px";
+	t.style.height=300+"px";
+}
+function des1(){
+	if(t.style.width==500+"px"){
+		t.style.width=0+"px";
+		t.style.height=0+"px";
+		t.style.fontSize=0+"px";
+		t.style.border=0+"px";
+	}
+}
+function e2(){
+	a.style.width=150+"px";
+	a.style.height=60+"px";
+	b.style.width=150+"px";
+	b.style.height=60+"px";
+	a.style.fontSize=60+"px";
+	b.style.fontSize=50+"px";
+}
+function mostrar(){
+		x=x+1;
+		setTimeout(mostrar1,200);
+		setTimeout(mostrar2,400);
+		setTimeout(mostrar3,600);
+		setTimeout(mostrar4,800);
+		a.style.color="#D7FFFC";
+		b.style.color="#D7FFFC";
+		if(x==100){
+			clearInterval(cronoi);
+		}
+	}
+	function mostrar1(){
+		a.style.width=25+"px";
+		a.innerHTML="H";
+		b.innerHTML="1";
+	}
+	function mostrar2(){
+		a.style.width=40+"px";
+		a.innerHTML="Ho";
+		b.innerHTML="1 2";
+	}
+	function mostrar3(){
+		a.style.width=90+"px";
+		a.innerHTML="Hol";
+		b.innerHTML="1 2 3";
+	}
+	function mostrar4(){
+		a.style.width=150+"px";
+		a.innerHTML="Hola";
+		b.innerHTML="1 2 3 4";
+	}
+	function o(){
+	a.style.width=0+"px";
+	a.style.height=0+"px";
+	b.style.width=0+"px";
+	b.style.height=0+"px";
+	
+}
+	function comen(){
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar poner el límite del afuera, lo cuál logré de cierto modo, aunque quería que luego de meterme en el cuadro y me saliera volviese a aparecer el estoy fuera, porque solo aparecía al inicio y afuera en la derecha a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere, hice mi mejor esfuerzo y por eso me sentí satisfecha."
+		com.style.width=550+"px";
+		com.style.height=300+"px";
+	}
+
+cronoi=setInterval(mostrar,2000);
+crono=setInterval(des,5000);
+cronoo=setInterval(des1,10000);
+cronooo=setInterval(des3,9000);
+</script>
+</body>
 </html>
