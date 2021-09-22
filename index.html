@@ -32,6 +32,7 @@
 		border: solid 1px; 
 		width: 0px;
 		height: 0px;
+		background: #51FFB8;
 	}
 	.cua{
 		position: absolute;
@@ -110,13 +111,13 @@
 	}
 </style>
 </head>
-<body style="background-color:#D7FFFC;">
+<body onmousemove="posicion(event)"  style="background-color:#D7FFFC;">
 <div class="tc"></div>
 <div class="titulo" onclick="lo()">NEOSISTEMAS
-<img src="Neosistemas.png" class="logo" id="log">
+<img src="ent31/Neosistemas.png" class="logo" id="log">
 </div>
 <div class="eje1" onclick="e1()"><center> EJE 1</center>
-<div onmousemove="posicion(event)" class="cuaad" id="t"></div>
+<div class="cuaad" id="t"></div>
 </div>
 <div class="oc" onclick="o()">Ocultar</div>
 <div class="eje2" onclick="e2()"><center> EJE 2</center>
@@ -147,7 +148,8 @@ function posicion(event){
 		t.innerHTML=x+"x  "+y+"y  "+"<br>Estoy dentro";
 	}
 	else{ 
-		t.innerHTML="<br>Estoy dentro";
+		t.innerHTML="<br>Estoy fuera";
+		t.style.color="#D7FFFC";
 	}
 }
 function e1(){
@@ -210,7 +212,7 @@ function mostrar(){
 	
 }
 	function comen(){
-		com.innerHTML="Me sentí bien realizando la actividad a persar de los problemas que se me presentaron, el primero fue intentar porner el límite del afuera, lo cuál no logré a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere."
+		com.innerHTML="Me sentí bien realizando la actividad a pesar de los problemas que se me presentaron, el primero fue intentar porner el límite del afuera, lo cuál no logré a pesar de que lo intenté, en el resto de ocasiones si me sentí muy cómoda, ya que tenía más libertad, pero la actividad en sí me pareció chévere."
 		com.style.width=550+"px";
 		com.style.height=150+"px";
 	}
